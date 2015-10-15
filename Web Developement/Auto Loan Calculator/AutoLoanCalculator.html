@@ -1,0 +1,39 @@
+<!doctype html>
+<!--
+	AutoLoanCalculator website.
+	Scott Smoke
+	CS 325
+	Sep. 30, 2014
+-->	
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Auto Loan Calculator</title>
+		<link rel = "stylesheet" href = "AutoLoanCalculator.css">
+		<script src = "AutoLoanCalculator.js"></script>
+	</head>
+	<body>
+	<noscript> 
+		<p style = "text-align::center">Sorry this page requires JavaScript
+	</noscript>
+	
+	<div class = "c">
+	<h1>Auto Loan Calculator </h1>
+		<form name = "info">
+			Purchase Price:<input type = "text" name = "purchasePrice" id = "purchasePrice" value = 0><br />
+			Cash Rebate:<input type = "text" name = "rebate" id = "rebate" value = 0><br />
+			Trade-in value:<input type = "text" name = "tradeInValue" id = "tradeInValue" value = 0><br />
+			Amount owed on trade-in: <input type = "text" name = "amountOwed" id = "amountOwed" value = 0><br />
+			Down payment:<input type = "text" name = "downPayment" id = "downPayment" value = 0><br />
+			Annual Interest Rate:<input type = "text" name = "annualRate" id ="annualRate" value = 0><br />
+			Loan Term: <input type = "text" name = "term" id = "term" value = 0><br />
+			<div class = "controls">
+				<input type = "button" value="Clear" onclick = "clearS()">
+				<input type = "button" value = "Compute" onclick = "compute();">
+			</div>
+		</form>
+		<p id ="monthlyPayment" >Monthly Car Payment = $0.00</p>
+		
+	</div>
+	</body>
+</html>

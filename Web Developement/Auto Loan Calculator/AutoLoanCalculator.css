@@ -1,0 +1,33 @@
+/*
+	StyleSheet for the AutoLoanCalculator website.
+	Scott Smoke
+	CS 325
+	Sep. 30, 2014
+*/
+
+h1{
+	text-align: center;
+}
+
+.c{
+	background-color:#00CC99;
+	font: Times, Seriff;
+	font-size: 1.5em;
+	text-align: right;
+	margin-right: 30%;
+	margin-left: 30%;
+}
+input{
+	background-color: white;
+	text-align: left;
+	margin: 1%;
+	border: 1px solid Black;
+	
+}
+input.in_error{
+	background-color: red;
+}
+form{
+	border-top: dotted Grey;
+	border-bottom: dotted Grey;
+}

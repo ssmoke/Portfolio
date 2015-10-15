@@ -1,0 +1,54 @@
+*********************************************************************
+*  SCOTT SMOKE                                                      *
+*  CS315 SPRING                                                     *
+*  THIS PROGRAM WILL READ IN DATA FIND THE  LARGEST INTEGER         *
+*  OF EACH LINE AND SUM UP THE LARGEST OF EACH LINE                 * 
+*  REGISTER 9,8,7    STORE READ IN VALUES                           *
+*          10        RUNNING TOTAL OF MAX VALUES                    *
+*                                                                   *
+*                                                                   *
+*                                                                   *
+*********************************************************************
+WORK     START
+	STM	14,12,12(13)	BEGINNING HOUSEKEEPING
+	BALR	12,0   
+	USING WORK,12
+HERE     ST	13,SAVEAREA+4
+	LA	13,SAVEAREA
+	SR	10,10	SETS A POSITION TO HOLD THE TOTAL
+LOOP     XREAD CARD,80	
+	BC	B'0100',ENDLOOP	LOOP COUNTER
+	XDECI	9,CARD	
+	XDECI 8,0(1)	
+	XDECI	7,1(1)	
+	ST	9,MAX	STORES THE MAX IN MEMORY
+	C	8,MAX	BEGGINING IF		
+	BC	B'0010',ELSEIF	BRANCHES TO ELSEIF IF 8>9
+	C	7,MAX
+	BC	B'0010',ELSE	BRANCH TO ELSE IF 7>9
+	BC	B'1111',ENDIF	
+ELSEIF	ST	8,MAX	STORES INTO MAX 
+	C	7,MAX	
+	BC	B'0100',ENDIF
+ELSE	ST	7,MAX	STORES INTO MAX
+	BC	B'1111',ENDIF
+ENDIF	L	6,MAX	
+	AR	10,6	ADDS TO GET TOTAL
+	XDECO	6,OUT
+	XPRNT	=CL9' MAXIMUM ',9
+	XPRNT	OUT,12
+	BC    B'1111',LOOP	
+ENDLOOP	XDECO 10,OUT
+	XPRNT	=CL7'TOTAL ',7
+	XPRNT	OUT,12
+	L 	13,SAVEAREA+4	BEGGING OF END HOUSEKEEPING
+	LM	14,12,12(13)
+	BR	14
+SAVEAREA	DS	18F
+CARD	DS	CL80
+MAX	DS	1F	STORAGE FOR THE MAXIMUM VALUE
+OUT	DS	CL12
+	END	WORK
+$ENTRY DATA.DAT
+
+
