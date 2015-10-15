@@ -1,0 +1,162 @@
+
+/*
+Sean Vaccaro
+Cory Feliciano
+Scott Smoke
+CS325
+Project 2 - Math Contest Registration style sheet
+*/
+
+body{
+	width: 700px;
+	margin: 0 auto;
+	background-color: #93b1c6;
+	color: #ffffff;
+}
+
+h1{
+	text-align: center;
+}
+
+p{
+	clear: both;
+}
+
+.school{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.sponsors{
+	border: 1px solid black;
+	padding: 20px;
+}
+
+.sponsorName{
+	float: left;
+	margin: right;
+	padding-right: 20px;
+}
+input.sponsorName_err{
+	float: left;
+	margin: right;
+	padding-right: 20px;
+	border-color:red;
+}
+
+.sponsorEmail{
+	float: left;
+	margin: right;
+	padding-right: 20px;
+}
+input.sponsorEmail_err{
+	float: left;
+	margin: right;
+	padding-right: 20px;
+	border-color:red;
+
+}
+.sponsorNumber{
+	float: left;
+	margin: right;
+	padding-right: 10px;
+}
+input.sponsorNumber_err{
+	float: left;
+	margin: right;
+	padding-right: 10px;
+	border-color:red;
+}
+.addSponsor{
+	padding-top: 10px;
+}
+
+.sponsorInput{
+	display: block;
+}
+.sponsorLabel{
+	display: block;
+}
+
+.divisions{
+	padding-top: 20px;
+	padding-bottom: 20px;
+
+}
+
+.column{
+	width: 200px;
+	float: left;
+	padding-right: 20px;
+}
+
+.divisionSelect{
+	float: left;
+}
+
+.testSite{
+	float: right;
+}
+
+.numberOfStudents{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.left{
+	display: inline-block;
+	width: 150px;
+}
+
+.value{
+	display: inline-block;
+	width: 75px;
+	text-align: right;
+}
+
+.number{
+	display: inline-block;
+	width: 100px;
+	border-color: gray;
+}
+input.number_err{
+	display: inline-block;
+	width: 100px;
+	border-color:red;
+}
+
+.total{
+	display: inline-block;
+	width: 329px;
+	text-align: right;
+}
+
+.noSelect{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	color: #000000;
+	background-color: gray;
+	text-align: center;
+	width: 100px;
+}
+input.in_error{
+	display: inline-block;
+	width: 100px;
+	border-color:red;
+}
+::-webkit-input-placeholder {
+	color: black;
+}
+:-moz-placeholder {
+	color: black;
+}
+::-moz-placeholder {
+	color: black;
+}
+:-ms-input-placeholder {
+	color: black;
+}
